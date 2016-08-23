@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bank Account</title>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <div class='box'>
+            <h1></h1>
+            <h2>Register a new account:</h2>
+            <form id="newAccount">
+              <div class="form-inline">
+                <label for='name'>Name:</label>
+                <input type='text' placeholder='Enter your name' id='name'>
+              </div>
+              <div class="form-inline">
+                <label for='initialDeposit'>Initial Deposit: $</label>
+                <input type='float' id='initialDeposit'>
+              </div>
+              <button type='submit' class="btn btn-primary">Create</button>
+            </form>
+          </div>
+        </div>
+        <div class='col-sm-6'>
+          <div class='box'>
+            <h2>Deposit or withdraw:</h2>
+            <form id="transaction">
+              <div class="form-inline">
+                <label for='depositInput'>Deposit Amount:</label>
+                <input type='float' id='depositInput'>
+              </div>
+              <div class="form-inline">
+                <label for='withdrawInput'>Withdraw Amount:</label>
+                <input type='float' id='withdrawInput'>
+              </div>
+              <button type='submit' class="btn btn-success">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-sm-push-3 jumbotron">
+          <h2 id="accountName"></h2>
+          <h3 id="accountBalance"></h3>
+          <h2>History</h2>
+          <ul id="accountHistory"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
